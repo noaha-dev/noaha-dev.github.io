@@ -849,7 +849,7 @@ nav a:link, nav a:visited {
 }
 
 .splash-container{
-    height: calc(100vh - 240px);
+    min-height: 75vh;
     display: flex;
     align-items: center;
 }
@@ -1028,8 +1028,11 @@ h2 {
 
 .sketch-lines-container{
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    margin-top: 0;
 }
 
 .hor-main-spacing{
@@ -1044,22 +1047,22 @@ h2 {
     top: -24px;
     height: calc(100% + 24px);
 
-    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .sketch-line-left{
-    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
     height: 100%;
 }
 
 .sketch-line{
     height: 100%;
-    border-right: 1px dashed rgba(0, 0, 0, 0.05);
+    border-right: 1px dashed rgba(0, 0, 0, 0.08);
 }
 
 .sketch-line-right{
     height: 100%;
-    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .home-arrow{
@@ -1835,9 +1838,15 @@ main{
 }
 
 
+@media only screen and (max-width: 768px) {
+    .splash-container {
+        min-height: 80vh;
+    }
+}
+
 @media only screen and (max-width: 560px) {
     .splash-container {
-        height: calc(100vh - 180px);
+        min-height: 90vh;
         display: flex;
         align-items: center;
     }
